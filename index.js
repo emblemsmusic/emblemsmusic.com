@@ -4,4 +4,6 @@ document.addEventListener("DOMContentLoaded", function() {
   setTimeout(()=>{
     body.classList.add('active');
   }, 1000)
+
+  console.log('Emblems Music');
 });
