@@ -394,6 +394,10 @@ ul li a{
   width: 100%;
   display: block;
   box-sizing: border-box;
+  transition: .3s all ease;
+}
+ul li a:hover{
+  transform: scale(1.05);
 }
 ul li a img{
   display: inline-block;
