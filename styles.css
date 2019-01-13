@@ -351,13 +351,29 @@ template {
 
 /* AUTHOR STYLES */
 body{
-  background: url('./emblems-background.jpg');
-  background-size: cover;
   background-position: center;
   display: block;
   height: 100vh;
   width: 100vw;
   font-size: 16px;
+  transition: .5 all ease;
+  background: #000000;
+}
+body>img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0;
+  display: none;
+  transition: 1s opacity ease;
+}
+body.active>img{
+  opacity: 1;
+  display: block;
 }
 h1{
   color: #000000;
@@ -370,6 +386,11 @@ h1{
   text-transform: uppercase;
   text-transform: uppercase;
   font-size: 5rem;
+  opacity: 0;
+  transition: 2s opacity ease;
+}
+body.active h1{
+  opacity: 1;
 }
 ul{
   list-style: none;
@@ -394,7 +415,11 @@ ul li a{
   width: 100%;
   display: block;
   box-sizing: border-box;
-  transition: .3s all ease;
+  transition: .3s scale ease, 1.5s opacity ease;
+  opacity: 0;
+}
+body.active ul li a{
+  opacity: 1;
 }
 ul li a:hover{
   transform: scale(1.05);
@@ -435,6 +460,11 @@ ul li a span{
   padding: 40px;
   max-width: 720px;
   border: 2px solid rgba(255,255,255,.5);
+  transition: .25s opacity ease;
+  opacity: 0;
+}
+body.active .table>div>div>div{
+  opacity: 1;
 }
 
 @media(max-width: 720px){

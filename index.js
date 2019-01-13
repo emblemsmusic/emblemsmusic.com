@@ -1,1 +1,7 @@
-console.log('Emblems Music')
+document.addEventListener("DOMContentLoaded", function() {
+  const body = document.querySelector('body');
+  console.log(body);
+  setTimeout(()=>{
+    body.classList.add('active');
+  }, 1000)
+});
